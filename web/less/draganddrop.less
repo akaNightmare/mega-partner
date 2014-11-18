@@ -1,0 +1,89 @@
+.drag-drop {
+  background: rgba(255, 255, 255, .8);
+  border: 10px dashed #ccc;
+  border-radius: 25px;
+  min-width: 200px;
+  max-width: 400px;
+  height: 300px;
+  transition: .2s linear;
+  margin: 20px auto;
+
+  &.hover {
+    border-color: #0c0;
+    background: #fff;
+  }
+
+  &-url {
+    min-width: 200px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 19px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 100px;
+
+    a {
+      text-decoration: underline;
+      color: #333;
+      display: block;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: #fff;
+        cursor: inherit;
+        display: block;
+      }
+    }
+  }
+}
+
+.h-separator {
+  text-align: center;
+  position: relative;
+  margin: 10px 0;
+
+  span {
+    color: #666;
+    display: inline-block;
+    font-weight: 700;
+
+    &:before,
+    &:after {
+      border-top: 1px solid #e8e8e8;
+      display: block;
+      height: 1px;
+      content: ' ';
+      width: 41%;
+      position: absolute;
+      left: 0;
+      top: .7em;;
+    }
+
+    &:after {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
+.yml-form-error-list {
+  margin-top: 10px !important;
+}
